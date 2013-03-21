@@ -1,0 +1,127 @@
+@import "../../../components/baseline/baseline";
+.bl-reset();
+
+
+//COLORS------
+
+  @bg: #fdfdfd;
+  @color-link: #900;
+  @color-border: darken(@bg, 15);
+  body {
+    background: @bg;
+    color: #333;
+  }
+
+  a {
+    color: @color-link;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+//------------
+
+
+//LAYOUT------
+
+  .wrapper {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+//------------
+
+
+//SPACING-----
+
+  @spacing-small: 5px;
+  @spacing-medium: 20px;
+  @spacing-large: 40px;
+
+  h1 {
+    margin: @spacing-large 0;
+  }
+
+  h2 {
+    margin: @spacing-large 0;
+  }
+
+  h3 {
+    margin: @spacing-medium 0;
+  }
+
+  p {
+    margin: @spacing-medium 0;
+  }
+
+//------------
+
+
+//TYPOGRAPHY--
+
+  @font-body: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  @font-headline: Georgia, Times, serif;
+
+  body {
+    font-family: @font-body;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h1,
+  h2 {
+    font-family: @font-headline;
+  }
+
+  h1 {
+    font-size: 46px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  pre {
+    font-size: 15px;
+  }
+
+//------------
+
+
+//STYLES------
+
+  h2 {
+    border-bottom: 1px solid @color-border;
+    padding-bottom: 10px;
+  }
+
+//------------
+
+
+//FOOTER------
+
+  .footer {
+    margin: 40px 0 10px;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid @color-border;
+    .built-with {
+      float: right;
+    }
+
+  }
+
+//------------
+
+/*@import "../../_syntax/github";*/
+@import "../../_syntax/base16-tomorrow";
+

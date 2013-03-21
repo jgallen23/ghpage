@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <head>
+    <title>Page title</title>
+    <link rel="stylesheet" href="public/common.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>markx</h1>
+<p>markx converts markdown with code snippets into html.  It also has options to pass in a template file and data.  It is great for building github pages and creating blog posts from markdown files.
+
+</p>
+<h2>Installation</h2>
+<h3>Inside a project:</h3>
+<pre><code class="lang-bash">npm install markx --save</code></pre>
+<h3>Globally:</h3>
+<pre><code class="lang-bash">npm install markx -g</code></pre>
+<h2>CLI Usage</h2>
+<pre><code class="lang-bash">markx input.md [opts]</code></pre>
+<h3>Options:</h3>
+<pre><code class="lang-bash">Options:
+  -t, --template   HTML template file                                        
+  -l, --highlight  Enable or disable syntax highlighting 
+  -d, --data       JSON|YAML data file that gets passed to input and template
+  -h, --help       Show help info</code></pre>
+<h2>API Usage</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> markx = require(<span class="string">'markx'</span>);
+
+markx({
+    input: <span class="string">'input.md'</span>, <span class="comment">//can be either a filepath or a source string</span>
+    template: <span class="string">'layout.html'</span>, <span class="comment">//can either be filepath or source string</span>
+    highlight: <span class="literal">true</span>, <span class="comment">//parse code snippets for syntax highlighters, default: true</span>
+    data: {} <span class="comment">//data that gets passed into template</span>
+}, <span class="keyword">function</span>(err, html) {
+});</code></pre>
+<h2>Example</h2>
+<h3>Command</h3>
+<pre><code class="lang-bash">markx.js readme-example.md --template readme-example-template.html --data readme-example.json</code></pre>
+<h3>Markdown</h3>
+<pre>
+#This is a heading
+
+This is a paragraph
+
+```javascript
+var a = '123';
+var f = function() {
+    return 4;
+}
+```
+</pre>
+
+<h3>Template</h3>
+<pre><code class="lang-html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="vbscript">&lt;%= pageTitle %&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">header</span>&gt;</span>Logo<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">section</span>&gt;</span>
+      <span class="vbscript">&lt;%- body %&gt;</span>
+    <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">footer</span>&gt;</span>Footer<span class="tag">&lt;/<span class="title">footer</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+<h3>Data</h3>
+<pre><code class="lang-javascript">{
+  <span class="string">"pageTitle"</span>: <span class="string">"This is the page title"</span>
+}</code></pre>
+<h3>Output</h3>
+<pre><code class="lang-html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span> /&gt;</span>
+  <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>This is the page title<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">header</span>&gt;</span>Logo<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">section</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h1</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+<span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a paragraph
+
+<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;<span class="title">pre</span>&gt;</span><span class="tag">&lt;<span class="title">code</span> <span class="attribute">class</span>=<span class="value">"lang-javascript"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"keyword"</span>&gt;</span>var<span class="tag">&lt;/<span class="title">span</span>&gt;</span> a = <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"string"</span>&gt;</span>'123'<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;
+<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"keyword"</span>&gt;</span>var<span class="tag">&lt;/<span class="title">span</span>&gt;</span> f = <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"keyword"</span>&gt;</span>function<span class="tag">&lt;/<span class="title">span</span>&gt;</span>() {
+    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"keyword"</span>&gt;</span>return<span class="tag">&lt;/<span class="title">span</span>&gt;</span> <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"number"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">span</span>&gt;</span>;
+}<span class="tag">&lt;/<span class="title">code</span>&gt;</span><span class="tag">&lt;/<span class="title">pre</span>&gt;</span>
+
+    <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">footer</span>&gt;</span>Footer<span class="tag">&lt;/<span class="title">footer</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre>
+<h2>History</h2>
+<p><a href="https://github.com/jgallen23/markx/blob/master/HISTORY.md">View History</a>
+
+</p>
+<h2>Development and Tests</h2>
+<pre><code class="lang-bash">npm install
+./node_modules/.bin/grunt</code></pre>
+
+      <div class="footer">
+        <div class="built-with">Built with <a href="">ghpage</a></div>
+        
+          Greg Allen
+          
+            <a href="http://twitter.com/jgaui">@jgaui</a>
+          
+        
+      </div>
+    </div>
+  </body>
+</html>
