@@ -9756,3 +9756,6 @@ jQuery.fn.toc.defaults = {
 
 //outbound link tracking
 $('a').clickd();
+
+$('#toc').toc({
+});

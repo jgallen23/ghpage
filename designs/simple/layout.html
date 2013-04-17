@@ -21,8 +21,9 @@
     <% } %>
   </head>
   <body>
+    <div id="toc"></div>
     <% if (locals.github) { %>
-      <a data-clickd-action="Fork" href="http://<%= locals.github %>"><img style="position: absolute; top: 0; right: 0; border: 0;" src="ui/ribbon.png" alt="Fork me on GitHub"></a>
+      <a class="ribbon" data-clickd-action="Fork" href="http://<%= locals.github %>"><img src="ui/ribbon.png" alt="Fork me on GitHub"></a>
     <% } %>
     <div class="wrapper">
       <%- body %>
