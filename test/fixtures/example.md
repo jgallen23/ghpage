@@ -2,7 +2,7 @@
 pageTitle: Markx
 builtBy: Greg Allen
 builtTwitter: jgaui
-analytics: UA-24017782-2
+github: github.com/jgallen23/markx
 ---
 # markx
 
