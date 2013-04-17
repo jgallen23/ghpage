@@ -1,3 +1,9 @@
+---
+pageTitle: Markx
+builtBy: Greg Allen
+builtTwitter: jgaui
+analytics: UA-24017782-2
+---
 # markx
 
 markx converts markdown with code snippets into html.  It also has options to pass in a template file and data.  It is great for building github pages and creating blog posts from markdown files.

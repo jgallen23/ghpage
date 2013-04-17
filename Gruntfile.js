@@ -52,13 +52,7 @@ module.exports = function(grunt) {
       simple: {
         input: 'test/fixtures/example.md',
         output: 'designs/simple/preview.html',
-        template: 'designs/simple/layout.html',
-        data: {
-          pageTitle: 'Page title',
-          builtBy: 'Greg Allen',
-          builtTwitter: 'jgaui',
-          analytics: 'UA-24017782-2'
-        }
+        template: 'designs/simple/layout.html'
       }
     },
     concat: {
