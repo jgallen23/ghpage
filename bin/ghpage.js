@@ -10,7 +10,8 @@ var opt = require('optimist')
   .options('d', {
     alias: 'design',
     describe: 'design option',
-    demand: true
+    demand: true,
+    'default': 'simple'
   })
   .options('t', {
     alias: 'data',

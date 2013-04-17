@@ -16,13 +16,6 @@ suite('cli', function() {
     });
   });
 
-  test('no design', function(done) {
-    exec(cmd + ' test/fixtures/input.md', function(err, stdout, stderr) {
-      assert.ok(stderr.match(/Missing required arguments: d/));
-      done();
-    });
-  });
-
   suite('build', function() {
 
     teardown(function(done) {
