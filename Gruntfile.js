@@ -44,7 +44,8 @@ module.exports = function(grunt) {
         data: {
           pageTitle: 'Page title',
           builtBy: 'Greg Allen',
-          builtTwitter: 'jgaui'
+          builtTwitter: 'jgaui',
+          analytics: 'UA-24017782-2'
         }
       }
     },
