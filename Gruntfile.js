@@ -4,7 +4,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     jshint: {
-      files: ['grunt.js', 'bin/*.js', 'lib/**/*.js', 'test/**/*.js']
+      files: [
+        'Gruntfile.js', 
+        'bin/*.js', 
+        'lib/**/*.js', 
+        'test/**/*.js',
+        'designs/**/.js'
+      ]
     },
     watch: {
       lib: {
@@ -20,6 +26,12 @@ module.exports = function(grunt) {
           'designs/**/*.less'
         ],
         tasks: 'less:designs'
+      },
+      designsScripts: {
+        files: [
+          'designs/**/*.js'
+        ],
+        tasks: 'concat:simple'
       },
       fixutres: {
         files: 'test/fixtures/example.md',
@@ -49,6 +61,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      simple: {
+        src: [
+          'components/jquery/jquery.js',
+          'components/clickd/dist/clickd.js',
+          'components/toc/dist/jquery.toc.js',
+          'designs/simple/ui/common.js'
+        ],
+        dest: 'designs/simple/public/common.js'
+      }
+    },
     less: {
       designs: {
         files: {
@@ -73,6 +96,7 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-simple-mocha');
   grunt.loadNpmTasks('grunt-markx');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -80,9 +104,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-reloadr');
 
   // Default task.
-  grunt.registerTask('designs', ['less', 'markx']);
+  grunt.registerTask('designs', ['less', 'concat', 'markx']);
   grunt.registerTask('lib', ['jshint', 'simplemocha']);
   grunt.registerTask('default', ['lib', 'designs']);
-  grunt.registerTask('dev', ['connect', 'reloadr', 'watch']);
+  grunt.registerTask('dev', ['designs', 'connect', 'reloadr', 'watch']);
 
 };

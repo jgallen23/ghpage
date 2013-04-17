@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "baseline": "~0.5.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "clickd": "~0.1.0",
+    "toc": "~0.1.2"
   }
 }
