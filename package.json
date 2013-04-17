@@ -3,7 +3,7 @@
   "description": "A cli tool to generate a one page site for your project to host on github pages",
   "homepage": "https://github.com/jgallen23/ghpage",
   "author": "Greg Allen <@jgaui> (http://jga.me)",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgallen23/ghpage.git"
