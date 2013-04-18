@@ -1,4 +1,12 @@
 
+0.1.1 / 2013-04-17 
+==================
+
+  * [bin] executable
+  * [simple] ui tweaks to toc
+  * [simple] style for list items
+  * [simple] moved ribbon to public
+
 0.1.0 / 2013-04-17 
 ==================
 
