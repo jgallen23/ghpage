@@ -10,6 +10,9 @@ markx converts markdown with code snippets into html.  It also has options to pa
 
 ##Installation
 
+- list
+- example
+
 ###Inside a project:
 ```bash
 npm install markx --save
