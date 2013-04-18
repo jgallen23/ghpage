@@ -132,15 +132,17 @@
 //TOC---------
 
   #toc {
-    font-size: 16px;
+    font-size: 15px;
     position: fixed;
-    top: 80px;
+    top: 90px;
+    width: 200px;
     right: 0;
     background: darken(@bg, 1);
     border: 1px solid darken(@bg, 5);
     border-right: 0;
     a {
-      padding: 10px;
+      padding: 1px 10px;
+      display: block;
     }
 
     .toc-h3 {
@@ -174,7 +176,7 @@
       width: 90%;
     }
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1020px) {
     #toc {
       display: none;
     }
