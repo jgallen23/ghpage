@@ -73,6 +73,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      designs: {
+        files: {
+          'designs/simple/public/common.js': 'designs/simple/public/common.js'
+        }
+      }
+    },
+    cssmin: {
+      designs: {
+        files: {
+          'designs/simple/public/common.css': 'designs/simple/public/common.css'
+        }
+      }
+    },
     reloadr: {
       designs: [
         'designs/**/public/*',
@@ -95,12 +109,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-reloadr');
 
   // Default task.
   grunt.registerTask('designs', ['less', 'concat', 'markx']);
   grunt.registerTask('lib', ['jshint', 'simplemocha']);
-  grunt.registerTask('default', ['lib', 'designs']);
+  grunt.registerTask('prod', ['uglify', 'cssmin']);
+  grunt.registerTask('default', ['lib', 'designs', 'prod']);
   grunt.registerTask('dev', ['designs', 'connect', 'reloadr', 'watch']);
 
 };
