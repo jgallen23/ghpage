@@ -207,6 +207,11 @@ h2 {
     display: block;
   }
 }
+.twitter-share-button,
+.twitter-follow-button {
+  margin: 10px 10px 0 0;
+  float: right;
+}
 /*@import "../../_syntax/github";*/
 pre {
   background: #373b41;
