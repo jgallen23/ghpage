@@ -1,4 +1,9 @@
 
+0.1.2 / 2013-05-02 
+==================
+
+  * [simple] added twitterFollow and twitterShare options to show twitter buttons
+
 0.1.1 / 2013-04-17 
 ==================
 
