@@ -23,10 +23,6 @@
 
 </p>
 <h2>Installation</h2>
-<ul>
-<li>list</li>
-<li>example</li>
-</ul>
 <h3>Inside a project:</h3>
 <pre><code class="lang-bash">npm install markx --save</code></pre>
 <h3>Globally:</h3>
@@ -36,9 +32,9 @@
 <h3>Options:</h3>
 <pre><code class="lang-bash">Options:
   -t, --template   HTML template file                                        
-  -l, --highlight  Enable or disable syntax highlighting 
-  -d, --data       JSON|YAML data file that gets passed to input and template
-  -h, --help       Show help info</code></pre>
+  <span class="operator">-l</span>, --highlight  Enable or disable syntax highlighting 
+  <span class="operator">-d</span>, --data       JSON|YAML data file that gets passed to input and template
+  -h, --help       Show <span class="built_in">help</span> info</code></pre>
 <h2>API Usage</h2>
 <pre><code class="lang-javascript"><span class="keyword">var</span> markx = require(<span class="string">'markx'</span>);
 
@@ -47,7 +43,7 @@ markx({
     template: <span class="string">'layout.html'</span>, <span class="comment">//can either be filepath or source string</span>
     highlight: <span class="literal">true</span>, <span class="comment">//parse code snippets for syntax highlighters, default: true</span>
     data: {} <span class="comment">//data that gets passed into template</span>
-}, <span class="keyword">function</span>(err, html) {
+}, <span class="function"><span class="keyword">function</span><span class="params">(err, html)</span> {</span>
 });</code></pre>
 <h2>Example</h2>
 <h3>Command</h3>
