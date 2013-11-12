@@ -13,6 +13,6 @@ default:
   - 'designs'
   - 'prod'
 dev:
-  - 'designs'
+  - 'default'
   - 'connect'
   - 'watch'

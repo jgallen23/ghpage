@@ -1,3 +1,5 @@
+options:
+  livereload: true
 lib:
   files:
     - '<%= jshint.files %>'
@@ -14,8 +16,14 @@ designsLess:
   tasks: 'less:designs'
 designsScripts:
   files:
-    'designs/**/*.js'
+    'designs/*/ui/*.js'
   tasks: 'concat:simple'
 fixtures:
   files: 'test/fixtures/example.md'
   tasks: 'markx'
+build:
+  files:
+    - 'Gruntfile.js'
+    - 'grunt/*'
+  tasks:
+    - 'default'
