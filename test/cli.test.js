@@ -32,7 +32,6 @@ suite('cli', function() {
         assert.ok(existsSync('out/index.html'));
         assert.ok(existsSync('out/public'));
         assert.ok(existsSync('out/public/common.css'));
-        console.log(fs.readFileSync('out/index.html', 'utf8'));
         assert.equal(fs.readFileSync('out/index.html', 'utf8'), fs.readFileSync('test/fixtures/output.html', 'utf8'));
         done();
       
