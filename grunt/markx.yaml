@@ -1,4 +1,5 @@
 simple:
-  input: 'test/fixtures/example.md'
-  output: 'designs/simple/preview.html'
-  template: 'designs/simple/layout.html'
+  options:
+    template: 'designs/simple/layout.html'
+  files:
+    'designs/simple/preview.html': 'test/fixtures/example.md'
