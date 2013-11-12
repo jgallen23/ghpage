@@ -1,4 +1,16 @@
 
+0.2.0 / 2013-11-12 
+==================
+
+  * font for clean design
+  * little updates to simple design
+  * added clean design
+  * updated grunt tasks
+  * updated grunt-markx
+  * updated to use oban.  fixes #2
+  * switched to use load-grunt-config.  fixes #5
+  * renamed component.json to bower.json. fixed #1
+
 0.1.5 / 2013-06-23 
 ==================
 
