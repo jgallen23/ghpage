@@ -3,3 +3,8 @@ simple:
     template: 'designs/simple/layout.html'
   files:
     'designs/simple/preview.html': 'test/fixtures/example.md'
+clean:
+  options:
+    template: 'designs/clean/layout.html'
+  files:
+    'designs/clean/preview.html': 'test/fixtures/example.md'

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <head>
+    <title><%= locals.pageTitle || "" %></title>
+    <link rel="stylesheet" href="public/common.css"/>
+    <% if (locals.analytics) { %>
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%= locals.analytics %>']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+    <% } %>
+  </head>
+  <body>
+    <div id="toc"></div>
+    <% if (locals.github) { %>
+      <a class="ribbon" data-clickd-action="Fork" href="http://<%= locals.github %>"><img src="public/ribbon.png" alt="Fork me on GitHub"></a>
+    <% } %>
+    <div class="wrapper">
+      <% if (locals.twitterFollow) { %>
+        <a href="https://twitter.com/<%= locals.twitterFollow %>" class="twitter-follow-button" data-show-count="false">Follow <%= locals.twitterFollow %></a>
+      <% } %>
+      <% if (locals.twitterShare) { %>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="<%= locals.twitterShare %>" data-via="<%= locals.builtTwitter %>">Tweet</a>
+      <% } %>
+      <%- body %>
+      <div class="footer">
+        <div class="built-with">Built with <a href="https://github.com/jgallen23/ghpage">ghpage</a></div>
+        <% if (locals.builtBy) { %>
+          <%= locals.builtBy %>
+          <% if (locals.builtTwitter) { %>
+            <a href="http://twitter.com/<%= locals.builtTwitter %>">@<%= locals.builtTwitter %></a>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+    <script src="public/common.js"></script>
+    <% if (locals.twitterShare || locals.twitterFollow) { %>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <% } %>
+  </body>
+</html>

@@ -4,3 +4,4 @@ designs:
       - 'bower_components/oban'
   files:
     'designs/simple/public/common.css': 'designs/simple/ui/common.less'
+    'designs/clean/public/common.css': 'designs/clean/ui/common.less'

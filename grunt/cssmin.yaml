@@ -1,3 +1,4 @@
 designs:
   files:
     'designs/simple/public/common.css': 'designs/simple/public/common.css'
+    'designs/clean/public/common.css': 'designs/clean/public/common.css'

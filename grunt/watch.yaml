@@ -17,7 +17,7 @@ designsLess:
 designsScripts:
   files:
     'designs/*/ui/*.js'
-  tasks: 'concat:simple'
+  tasks: 'concat'
 fixtures:
   files: 'test/fixtures/example.md'
   tasks: 'markx'

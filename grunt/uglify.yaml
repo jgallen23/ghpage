@@ -1,3 +1,4 @@
 designs:
   files:
     'designs/simple/public/common.js': 'designs/simple/public/common.js'
+    'designs/clean/public/common.js': 'designs/clean/public/common.js'
