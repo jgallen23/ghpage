@@ -1,0 +1,18 @@
+designs:
+  - 'less'
+  - 'concat'
+  - 'markx'
+lib:
+  - 'jshint'
+  - 'simplemocha'
+prod:
+  - 'uglify'
+  - 'cssmin'
+default:
+  - 'lib'
+  - 'designs'
+  - 'prod'
+dev:
+  - 'designs'
+  - 'connect'
+  - 'watch'

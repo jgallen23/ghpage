@@ -1,0 +1,6 @@
+designs:
+  options:
+    paths:
+      - 'bower_components/oban'
+  files:
+    'designs/simple/public/common.css': 'designs/simple/ui/common.less'

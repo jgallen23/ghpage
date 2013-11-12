@@ -1,0 +1,7 @@
+simple:
+  src:
+    - 'bower_components/jquery/jquery.js'
+    - 'bower_components/clickd/dist/clickd.js'
+    - 'bower_components/toc/dist/jquery.toc.js'
+    - 'designs/simple/ui/common.js'
+  dest: 'designs/simple/public/common.js'

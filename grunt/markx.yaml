@@ -1,0 +1,4 @@
+simple:
+  input: 'test/fixtures/example.md'
+  output: 'designs/simple/preview.html'
+  template: 'designs/simple/layout.html'

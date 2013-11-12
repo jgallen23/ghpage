@@ -1,0 +1,21 @@
+lib:
+  files:
+    - '<%= jshint.files %>'
+    - 'test/fixtures/*'
+  tasks: 
+    - 'jshint'
+    - 'simplemocha'
+designs:
+  files: 'designs/**/layout.html'
+  tasks: 'markx'
+designsLess:
+  files:
+    - 'designs/**/*.less'
+  tasks: 'less:designs'
+designsScripts:
+  files:
+    'designs/**/*.js'
+  tasks: 'concat:simple'
+fixtures:
+  files: 'test/fixtures/example.md'
+  tasks: 'markx'

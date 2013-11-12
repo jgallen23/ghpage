@@ -1,0 +1,6 @@
+files:
+  - 'Gruntfile.js'
+  - 'bin/*.js'
+  - 'lib/**/*.js'
+  - 'test/**/*.js'
+  - 'designs/**/.js'
