@@ -27,25 +27,25 @@
       <a class="ribbon" data-clickd-action="Fork" href="http://<%= locals.github %>"><img src="public/ribbon.png" alt="Fork me on GitHub"></a>
     <% } %>
     <div class="wrapper">
-      <% if (locals.twitterFollow) { %>
-        <a href="https://twitter.com/<%= locals.twitterFollow %>" class="twitter-follow-button" data-show-count="false">Follow <%= locals.twitterFollow %></a>
+      <% if (locals.twitterUser) { %>
+        <a href="https://twitter.com/<%= locals.twitterUser %>" class="twitter-follow-button" data-show-count="false">Follow <%= locals.twitterUser %></a>
       <% } %>
       <% if (locals.twitterShare) { %>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="<%= locals.twitterShare %>" data-via="<%= locals.builtTwitter %>">Tweet</a>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="<%= locals.twitterShare %>" <% if (locals.twitterUser) { %>data-via="<%= locals.builtTwitter %>" <% } %>>Tweet</a>
       <% } %>
       <%- body %>
       <div class="footer">
         <div class="built-with">Built with <a href="https://github.com/jgallen23/ghpage">ghpage</a></div>
         <% if (locals.builtBy) { %>
           <%= locals.builtBy %>
-          <% if (locals.builtTwitter) { %>
-            <a href="http://twitter.com/<%= locals.builtTwitter %>">@<%= locals.builtTwitter %></a>
+          <% if (locals.twitterUser) { %>
+            <a href="http://twitter.com/<%= locals.twitterUser %>">@<%= locals.twitterUser %></a>
           <% } %>
         <% } %>
       </div>
     </div>
     <script src="public/common.js"></script>
-    <% if (locals.twitterShare || locals.twitterFollow) { %>
+    <% if (locals.twitterShare || locals.twitterUser) { %>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <% } %>
   </body>

@@ -1,10 +1,9 @@
 ---
 pageTitle: Markx
 builtBy: Greg Allen
-builtTwitter: JGAui
 github: github.com/jgallen23/markx
 twitterShare: true
-twitterFollow: JGAui
+twitterUser: JGAui
 ---
 # markx
 
