@@ -1,4 +1,12 @@
 
+0.2.1 / 2013-11-12 
+==================
+
+  * fixed wrapping long lines in code
+  * minify simple assets
+  * fixed media queries on clean
+  * removed console.log
+
 0.2.0 / 2013-11-12 
 ==================
 
