@@ -243,14 +243,22 @@
   color: #b294bb;
 }
 
-pre code {
-  display: block;
-  background: lighten(#1d1f21, 10);
+code {
+  background: lighten(#1d1f21, 70);
   border-radius: 5px;
-  color: #c5c8c6;
+  color: #333;
   font-family: Menlo, Monaco, Consolas, monospace;
-  line-height: 1.5;
   border: 1px solid #ccc;
+  padding: 2px 4px;
+  font-size: 15px;
+}
+
+pre code {
+  font-size: 14px;
+  background: lighten(#1d1f21, 10);
+  color: #c5c8c6;
   padding: 10px;
+  display: block;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
